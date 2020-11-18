@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Input } from "@angular/core";
 import { Food } from "../food";
+import { FirebaseService } from "../firebase.service";
 
 @Component({
   selector: "app-display-menu",
@@ -8,7 +9,11 @@ import { Food } from "../food";
   styleUrls: ["./display-menu.component.css"]
 })
 export class DisplayMenuComponent implements OnInit {
-  constructor() {}
+  constructor(private firebaseService: FirebaseService) {}
   @Input() food: Food;
-  ngOnInit() {}
+  ngOnInit() {
+    this.food = {
+      ...this.food
+    };
+  }
 }
