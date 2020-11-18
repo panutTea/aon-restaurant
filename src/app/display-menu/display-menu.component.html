@@ -1,8 +1,24 @@
-<div class="content">
-	<div class="head">
-		<div>{{ food.name }}}</div>
-	</div>
-	<div class="body">
-		{{ food.price }}
-	</div>
+<div class="menu">
+	<label for="food">รายการอาหาร: </label>
+	<select id="food" name="food" value="">
+      <option value="กะเพรา">กะเพรา</option>
+      <option value="ผัดพริกแกง">ผัดพริกแกง</option>
+      <option value="ลาบ">ลาบ</option>
+      <option value="สเต็ก">สเต็ก</option>
+    </select>
+</div>
+
+<div class="ingredients">
+	<label for="ingredients">วัตถุดิบ: </label>
+	<select id="ingredients" name="ingredients" value="">
+    <option value="หมู">หมู</option>
+    <option value="ไก่">ไก่</option>
+    <option value="หมูกรอบ">หมูกรอบ</option>
+    <option value="ปลาหมึก">ปลาหมึก</option>
+    <option value="กุ้ง">กุ้ง</option>
+    <option value="ฉลาม">ฉลาม</option>
+  </select>
+</div>
+<div class="summit">
+	<button type="button" onclick="alert('ยังไม่เสร็จไอสัส')">สั่งอาหาร</button>
 </div>

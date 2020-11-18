@@ -9,7 +9,7 @@ export class FirebaseService {
 
   getFoods() {
     let DocRef = this.firestore.collection<Food>("food", e =>
-      e.orderBy("desc")
+      e.orderBy("price","desc")
     );
     return DocRef.valueChanges();
   }
